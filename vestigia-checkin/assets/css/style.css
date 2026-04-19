@@ -613,7 +613,10 @@ p  { margin-bottom: 0.75rem; }
 /* ── Modal ──────────────────────────────────────────────────────────────────── */
 .modal-overlay {
     position: fixed;
-    inset: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: var(--sidebar-ancho);
     background: rgba(0,0,0,0.45);
     z-index: 200;
     display: flex;
@@ -966,6 +969,9 @@ p  { margin-bottom: 0.75rem; }
         z-index: 99;
     }
     .sidebar-overlay.activo { display: block; }
+    .modal-overlay {
+        left: 0;
+    }
     .horario-semana { grid-template-columns: repeat(2, 1fr); }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .form-row { grid-template-columns: 1fr; }
