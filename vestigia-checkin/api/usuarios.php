@@ -322,7 +322,7 @@ function mostrarListaEmpleados(PDO $pdo): void
 </div>
 
 <!-- Modal nuevo/editar usuario -->
-<div id="modal-usuario" class="modal" style="display:none;">
+<div id="modal-usuario" class="modal-empleados-overlay">
     <div class="modal-contenido" style="max-width:520px;">
         <div class="modal-cabecera">
             <h3 id="modal-titulo">Nuevo empleado</h3>
