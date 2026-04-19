@@ -11,7 +11,8 @@ require_once dirname(__DIR__) . '/includes/funciones.php';
 
 requireLogin();
 
-$userId  = userId();\n$pdo     = getDB();
+$userId  = userId();
+$pdo     = getDB();
 $vista   = $_GET['vista'] ?? 'mias';
 $tipoFiltro = $_GET['tipo'] ?? '';
 $mensaje = '';

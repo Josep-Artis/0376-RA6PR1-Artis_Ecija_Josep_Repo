@@ -10,13 +10,13 @@ date_default_timezone_set('Europe/Madrid');
 // ── Configuración de base de datos ──────────────────────────────────────────
 define('DB_HOST',     'localhost');
 define('DB_NAME',     'vestigia_checkin');
-define('DB_USER',     'root');          // Cambiar en producción
-define('DB_PASS',     '');             // Cambiar en producción
+define('DB_USER',     'vestigia');          // Cambiar en producción
+define('DB_PASS',     'vestigia123');             // Cambiar en producción
 define('DB_CHARSET',  'utf8mb4');
 
 // ── Configuración de la aplicación ──────────────────────────────────────────
 define('APP_NAME',    'Vestigia CheckIn');
-define('APP_URL',     'http://localhost/vestigia-checkin'); // Cambiar en producción
+define('APP_URL',     'http://localhost/AppWebHoursEnterprise/vestigia-checkin'); // Cambiar en producción
 define('APP_VERSION', '1.0.0');
 
 // ── Configuración de sesión ─────────────────────────────────────────────────
