@@ -86,12 +86,13 @@ async function registrarEntrada() {
     actualizarEstadoVisual(true, respuesta.hora_entrada, respuesta.tarde, respuesta.minutos_retraso);
     iniciarContador(respuesta.hora_entrada);
     Vestigia.toast('Entrada registrada correctamente.', 'exito');
-    //Recarga la pagina para poder ver estado, registro del fichaje y que se pueda registrar la salida sin tener 
-    //que actualizar manualmente el estado del fichaje
-    setTimeout(() => location.reload(), 1500);
+    
     // Añadir al historial de hoy
     agregarEntradaHistorial(respuesta);
 }
+    //Recarga la pagina para poder ver estado, registro del fichaje y que se pueda registrar la salida sin tener 
+    //que actualizar manualmente el estado del fichaje
+    setTimeout(() => location.reload(), 1000);
 
 // ── Registrar salida ──────────────────────────────────────────────────────────
 async function registrarSalida() {
