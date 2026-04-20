@@ -1,10 +1,10 @@
-# 📋 Vestigia CheckIn
+# Vestigia CheckIn
 
 Sistema de Control de Horarios Empresarial inspirado en Google Classroom.
 
 ---
 
-## 🎨 Identidad Corporativa
+## Identidad Corporativa
 
 **Paleta de Colores:**
 - **Primario:** `#1B4332` (Verde Inglés / Oscuro)
@@ -15,7 +15,7 @@ Sistema de Control de Horarios Empresarial inspirado en Google Classroom.
 
 ---
 
-## 🚀 Instalación
+## Instalación
 
 ### 1. Requisitos Previos
 
@@ -62,11 +62,11 @@ chmod 755 assets/img/
 - **Email:** `admin@vestigia.com`
 - **Password:** `admin123`
 
-⚠️ **IMPORTANTE:** Cambiar la contraseña del administrador después del primer acceso.
+**IMPORTANTE:** Cambiar la contraseña del administrador después del primer acceso.
 
 ---
 
-## 📂 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 /vestigia-checkin
@@ -101,28 +101,28 @@ chmod 755 assets/img/
 
 ---
 
-## 👥 Roles y Permisos
+## Roles y Permisos
 
-### 🔑 Superadmin (Dirección)
+###  Superadmin (Dirección)
 - Control total del sistema
 - Gestión de empleados (alta/baja/archivo)
 - Acceso a todos los informes
 - Creación de proyectos
 - Modificación de fichajes
 
-### 👔 Admin_RRHH (RRHH)
+###  Admin_RRHH (RRHH)
 - Gestión de empleados
 - Modificación de fichajes
 - Aprobación de vacaciones
 - Acceso a informes globales
 
-### 📊 Subadmin (Jefe de Departamento)
+###  Subadmin (Jefe de Departamento)
 - Gestión de proyectos de su departamento
 - Control de horarios de su equipo
 - Aprobación de vacaciones de su equipo
 - Informes de su departamento
 
-### 👤 User (Empleado)
+###  User (Empleado)
 - Fichaje diario
 - Consulta de horario
 - Informes propios
@@ -130,7 +130,7 @@ chmod 755 assets/img/
 
 ---
 
-## ⏰ Gestión de Horarios
+##  Gestión de Horarios
 
 ### Jornadas Definidas:
 
@@ -149,27 +149,27 @@ chmod 755 assets/img/
 
 ---
 
-## 📋 Funcionalidades Principales
+##  Funcionalidades Principales
 
-### 🕐 Módulo de Fichaje
+###  Módulo de Fichaje
 - Selección de proyecto al iniciar jornada
 - Marcador de Teletrabajo opcional
 - Notificaciones automáticas por retrasos o falta de fichaje
 - Edición de fichajes (solo Superadmin y RRHH)
 
-### 📁 Gestión de Proyectos
+###  Gestión de Proyectos
 - Creación por Dirección o Jefes de Departamento
 - Proyectos interdepartamentales
 - Asignación múltiple: Un empleado puede trabajar en varios proyectos
 
-### 📊 Informes y Solicitudes
+###  Informes y Solicitudes
 - **Informes:** Filtros temporales y exportación a PDF/Excel
 - **Solicitudes:** Bajas, vacaciones, cambios de horario, teletrabajo
 - **Vacaciones:** Fijadas en enero para todo el año
 
 ---
 
-## 🛠️ Mantenimiento
+##  Mantenimiento
 
 ### Backup de Base de Datos
 
@@ -186,7 +186,7 @@ mysqldump -u root -p vestigia_checkin > backup_$(date +%Y%m%d).sql
 
 ---
 
-## 🔒 Seguridad
+##  Seguridad
 
 - **Contraseñas:** Cifradas con `password_hash()` (bcrypt)
 - **CSRF Protection:** Tokens en todos los formularios
@@ -196,12 +196,12 @@ mysqldump -u root -p vestigia_checkin > backup_$(date +%Y%m%d).sql
 
 ---
 
-## 📧 Soporte
+##  Soporte
 
 Para reportar problemas o solicitar nuevas funcionalidades, contactar con el equipo de desarrollo.
 
 ---
 
-## 📄 Licencia
+##  Licencia
 
 Copyright © 2026 Vestigia. Todos los derechos reservados.
