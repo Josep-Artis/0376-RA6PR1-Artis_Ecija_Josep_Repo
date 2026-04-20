@@ -58,6 +58,13 @@ $_paginaActual = basename($_SERVER['PHP_SELF']);
             <span class="nav-icon">👥</span> Equipo
         </a>
 
+        <?php if (tieneRol([ROL_SUPERADMIN, ROL_SUBADMIN])): ?>
+        <a href="<?= APP_URL ?>/pages/proyectos.php"
+           class="nav-link <?= $_paginaActual === 'proyectos.php' ? 'activo' : '' ?>">
+            <span class="nav-icon">📁</span> Proyectos
+        </a>
+        <?php endif; ?>
+
         <?php if (tieneRol([ROL_SUPERADMIN, ROL_ADMIN_RRHH])): ?>
         <a href="<?= APP_URL ?>/pages/solicitudes.php?vista=admin"
            class="nav-link <?= (isset($_GET['vista']) && $_GET['vista'] === 'admin') ? 'activo' : '' ?>">
