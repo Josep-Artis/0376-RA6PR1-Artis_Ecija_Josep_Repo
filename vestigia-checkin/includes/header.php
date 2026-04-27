@@ -30,10 +30,13 @@
             $notifCount = (int)$st_->fetchColumn();
         }
     }
+    // Propuestas recibidas pendientes de respuesta (todos los usuarios)
+    $propuestasPendientes = contarPropuestasPendientes(userId());
+    $totalNotif = $notifCount + $propuestasPendientes;
     ?>
-    <?php if ($notifCount > 0): ?>
-    <a href="<?= APP_URL ?>/pages/solicitudes.php?vista=admin" class="header-notif" title="Solicitudes pendientes">
-        🔔<span class="badge"><?= $notifCount ?></span>
+    <?php if ($totalNotif > 0): ?>
+    <a href="<?= APP_URL ?>/pages/solicitudes.php?vista=<?= $propuestasPendientes > 0 && $notifCount === 0 ? 'recibidas' : 'admin' ?>" class="header-notif" title="<?= $propuestasPendientes > 0 ? 'Tienes propuestas pendientes de respuesta' : 'Solicitudes pendientes' ?>">
+        🔔<span class="badge"><?= $totalNotif ?></span>
     </a>
     <?php endif; ?>
 </header>
