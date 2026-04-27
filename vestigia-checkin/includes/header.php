@@ -31,7 +31,10 @@
         }
     }
     // Propuestas recibidas pendientes de respuesta (todos los usuarios)
-    $propuestasPendientes = contarPropuestasPendientes(userId());
+    $pdo_u = getDB();
+    $st_u  = $pdo_u->prepare("SELECT COUNT(*) FROM solicitudes WHERE destinatario_id = ? AND estado = 'pendiente'");
+    $st_u->execute([userId()]);
+    $propuestasPendientes = (int)$st_u->fetchColumn();
     $totalNotif = $notifCount + $propuestasPendientes;
     ?>
     <?php if ($totalNotif > 0): ?>
